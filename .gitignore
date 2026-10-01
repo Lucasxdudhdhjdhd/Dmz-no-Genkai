@@ -1,0 +1,28 @@
+# Gradle / ForgeGradle
+.gradle/
+build/
+run/
+out/
+
+# El wrapper SÍ se commitea (gradlew, gradlew.bat, gradle/wrapper/*), no lo ignores.
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jar de DragonMineZ: no es nuestra para redistribuir.
+# Opción A: comentá esta línea y commiteala vos mismo en libs/.
+# Opción B (recomendado si el repo es público): dejala ignorada y configurá
+# el secret DMZ_JAR_URL en GitHub Actions (ver .github/workflows/build.yml
+# y README.md) para que el workflow la descargue en cada build.
+libs/*.jar
+!libs/.gitkeep

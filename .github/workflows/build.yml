@@ -1,0 +1,90 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  workflow_dispatch: {}
+
+# Evita builds duplicados si empujás varios commits seguidos a la misma rama/PR.
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # DragonMineZ no se puede redistribuir en este repo, así que la jar no
+      # está commiteada. Este paso la resuelve, en orden de preferencia:
+      #   1. Ya está en libs/ (la commiteaste vos, ver .gitignore).
+      #   2. El secret DMZ_JAR_URL apunta a una URL de descarga (tu propio
+      #      Nexus/Drive/servidor; configuralo en Settings -> Secrets ->
+      #      Actions de este repo).
+      #   3. Ninguna de las dos: falla el build con un mensaje claro, en vez
+      #      de fallar más adelante con un error de compilación confuso.
+      - name: Resolver dependencia de DragonMineZ
+        env:
+          DMZ_JAR_URL: ${{ secrets.DMZ_JAR_URL }}
+        run: |
+          mkdir -p libs
+          if ls libs/*.jar >/dev/null 2>&1; then
+            echo "Ya hay una jar en libs/, se usa esa."
+          elif [ -n "$DMZ_JAR_URL" ]; then
+            echo "Descargando DragonMineZ desde el secret DMZ_JAR_URL..."
+            curl -sSL -o libs/dragonminez-2_1_3.jar "$DMZ_JAR_URL"
+          else
+            echo "::error::Falta la jar de DragonMineZ. Commiteala en libs/, o configurá el secret DMZ_JAR_URL con una URL de descarga (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+
+      # Cachea ~/.gradle entre corridas para no volver a bajar ForgeGradle,
+      # Parchment y el resto de las dependencias en cada build.
+      - name: Cachear Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle', 'gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
+
+      - name: Dar permiso de ejecución a gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew build --no-daemon --stacktrace
+
+      - name: Subir la jar compilada
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dmzkiaspects-jar
+          path: build/libs/*.jar
+          if-no-files-found: error
+
+      - name: Subir reportes de test/build si algo falla
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-reports
+          path: |
+            build/reports/
+            **/build/reports/
+          if-no-files-found: ignore
