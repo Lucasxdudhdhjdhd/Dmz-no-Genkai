@@ -37,25 +37,16 @@ minecraft {
 
 repositories {
     mavenCentral()
-    // DragonMineZ no publica en un maven público: se agrega la jar como
-    // dependencia local en libs/ (ver dependencia flatDir de abajo).
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    // Dependencia compileOnly contra la jar de DragonMineZ 2.1.3.
-    // flatDir + fg.deobf resuelve por convención "grupo-version.jar", así que
-    // el archivo debe llamarse libs/dragonminez-2.1.3.jar (con puntos, no
-    // guiones bajos). Si preferís usar el jar tal cual viene descargado
-    // (dragonminez-2_1_3.jar), reemplazá esta línea por:
-    //   compileOnly fg.deobf(files('libs/dragonminez-2_1_3.jar'))
+    // Dependencia compileOnly contra la jar de DragonMineZ, apuntada directo
+    // al archivo en libs/ (DragonMineZ no publica en un maven público).
     // compileOnly porque en runtime el jar real de DMZ ya está puesto por
     // el usuario final como mod normal (no lo empaquetamos nosotros).
-    compileOnly fg.deobf("dragonminez:dragonminez:2.1.3")
+    compileOnly fg.deobf(files('libs/dragonminez-2_1_3.jar'))
 }
 
 // Rellena ${file.jarVersion} en mods.toml
