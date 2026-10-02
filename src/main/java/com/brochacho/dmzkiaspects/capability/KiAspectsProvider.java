@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  */
 public class KiAspectsProvider implements ICapabilityProvider, INBTSerializable<CompoundTag> {
 
-    public static final ResourceLocation ID = new ResourceLocation(DMZKiAspectsMod.MODID, "ki_aspects");
+    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(DMZKiAspectsMod.MODID, "ki_aspects");
 
     private final KiAspectsData data;
     private final LazyOptional<KiAspectsData> optional;

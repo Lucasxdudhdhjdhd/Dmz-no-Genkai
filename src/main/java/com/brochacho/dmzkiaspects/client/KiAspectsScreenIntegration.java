@@ -9,6 +9,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.FormattedCharSequence;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -198,6 +199,11 @@ public final class KiAspectsScreenIntegration {
 
         int x = event.getScreen().width - 166;
         int y = 20;
-        gfx.renderTooltip(font, lines, x, y);
+        // renderTooltip quiere List<? extends FormattedCharSequence>, no List<Component>
+        // directo (eso lo descubrió el CI, no lo tenía verificado de antes).
+        List<FormattedCharSequence> visualLines = lines.stream()
+                .map(Component::getVisualOrderText)
+                .toList();
+        gfx.renderTooltip(font, visualLines, x, y);
     }
 }

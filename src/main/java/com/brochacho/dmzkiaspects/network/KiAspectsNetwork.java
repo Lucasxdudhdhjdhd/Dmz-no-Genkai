@@ -19,7 +19,7 @@ public final class KiAspectsNetwork {
     private static final String PROTOCOL_VERSION = "1";
 
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-            new ResourceLocation(DMZKiAspectsMod.MODID, "main"),
+            ResourceLocation.fromNamespaceAndPath(DMZKiAspectsMod.MODID, "main"),
             () -> PROTOCOL_VERSION,
             PROTOCOL_VERSION::equals,
             PROTOCOL_VERSION::equals
