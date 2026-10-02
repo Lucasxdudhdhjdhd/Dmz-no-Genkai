@@ -5,7 +5,7 @@ issueTrackerURL="https://example.com"
 
 [[mods]]
 modId="dmzkiaspects"
-version="${file.jarVersion}"
+version="${mod_version}"
 displayName="DMZ Ki Aspects"
 authors="Brochacho"
 description='''Addon standalone para DragonMineZ que implementa el sistema
