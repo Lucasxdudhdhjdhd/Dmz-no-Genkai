@@ -31,6 +31,10 @@ Si no hacés ninguna de las dos, el build falla en el paso "Resolver dependencia
 DragonMineZ" con un mensaje explicando exactamente qué falta — no como un error de
 compilación confuso más adelante.
 
+**Si el build falla por otro motivo** (error de compilación, etc.), el workflow guarda el log
+completo en `ci-logs/last-failure.log`, commiteado de vuelta al repo automáticamente. Un
+`git pull` alcanza para leerlo — no hace falta entrar a la pestaña Actions ni bajar nada de ahí.
+
 ## Fase 1
 - `capability/KiAspectsData.java` — los 5 aspectos + fórmulas placeholder + NBT.
 - `capability/KiAspectsProvider.java` — ICapabilityProvider (patrón de StatsProvider).
