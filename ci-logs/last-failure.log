@@ -1,6 +1,6 @@
-Run: 36996781515 (attempt 1)
-Commit: c53d5159b1c5ca105a6cfda4113e2d27f168c363
-Fecha: 2026-10-02T10:42:43Z
+Run: 36997095913 (attempt 1)
+Commit: 69648286ab3d87f1c4c2bd087f013785d2e3cda4
+Fecha: 2026-10-02T10:46:14Z
 ----
 Downloading https://services.gradle.org/distributions/gradle-8.1.1-bin.zip
 ...........10%............20%............30%............40%............50%............60%............70%............80%...........90%............100%
@@ -39,48 +39,31 @@ Executing steps
  > Running 'listLibraries'
  > Running 'rename'
 Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
-[10:42:27] [main/INFO]: Writing debug log file accesstransform.log
-[10:42:27] [main/INFO]: Access Transformer processor running version 8.2.14
-[10:42:27] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/_atJar_4/parent_at.cfg]
-[10:42:27] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-injected.jar
-[10:42:27] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar
-[10:42:27] [main/INFO]: Transformer file /home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/_atJar_4/parent_at.cfg
-[10:42:27] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar, overwriting
-[10:42:30] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar
+[10:45:51] [main/INFO]: Writing debug log file accesstransform.log
+[10:45:51] [main/INFO]: Access Transformer processor running version 8.2.14
+[10:45:51] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/_atJar_4/parent_at.cfg]
+[10:45:51] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-injected.jar
+[10:45:51] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar
+[10:45:51] [main/INFO]: Transformer file /home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/_atJar_4/parent_at.cfg
+[10:45:51] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar, overwriting
+[10:45:55] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar
 Creating SRG -> MCP TSRG
-/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/src/main/java/com/brochacho/dmzkiaspects/network/KiAspectsNetwork.java:22: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
-            new ResourceLocation(DMZKiAspectsMod.MODID, "main"),
-            ^
-/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/src/main/java/com/brochacho/dmzkiaspects/client/KiAspectsScreenIntegration.java:201: error: no suitable method found for renderTooltip(Font,List<Component>,int,int)
-        gfx.renderTooltip(font, lines, x, y);
-           ^
-    method GuiGraphics.renderTooltip(Font,ItemStack,int,int) is not applicable
-      (argument mismatch; List<Component> cannot be converted to ItemStack)
-    method GuiGraphics.renderTooltip(Font,Component,int,int) is not applicable
-      (argument mismatch; List<Component> cannot be converted to Component)
-    method GuiGraphics.renderTooltip(Font,List<? extends FormattedCharSequence>,int,int) is not applicable
-      (argument mismatch; List<Component> cannot be converted to List<? extends FormattedCharSequence>)
-/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/src/main/java/com/brochacho/dmzkiaspects/capability/KiAspectsProvider.java:23: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
-    public static final ResourceLocation ID = new ResourceLocation(DMZKiAspectsMod.MODID, "ki_aspects");
-                                              ^
-Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-1 error
-2 warnings
 
-> Task :compileJava FAILED
+> Task :processResources FAILED
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':compileJava'.
-> Compilation failed; see the compiler error output for details.
+Execution failed for task ':processResources'.
+> Could not copy file '/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/src/main/resources/META-INF/mods.toml' to '/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/resources/main/META-INF/mods.toml'.
+   > Missing property (file) for Groovy template expansion. Defined keys [minecraft_version, forge_version, mod_id, mod_name, mod_version, mod_authors, mod_description, project].
 
 * Try:
 > Run with --info or --debug option to get more log output.
 > Run with --scan to get full insights.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileJava'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':processResources'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:149)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:147)
@@ -111,45 +94,43 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compile
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
-Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
-	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:57)
-	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:39)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:51)
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:37)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
-	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
-	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$3(JavaCompile.java:202)
-	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:52)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:64)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:48)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:48)
-	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:220)
-	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:161)
-	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:146)
+Caused by: org.gradle.api.internal.file.AbstractFileTreeElement$CopyFileElementException: Could not copy file '/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/src/main/resources/META-INF/mods.toml' to '/home/runner/work/Dmz-no-Genkai/Dmz-no-Genkai/build/resources/main/META-INF/mods.toml'.
+	at org.gradle.api.internal.file.AbstractFileTreeElement.copyTo(AbstractFileTreeElement.java:88)
+	at org.gradle.api.internal.file.copy.DefaultFileCopyDetails.copyTo(DefaultFileCopyDetails.java:129)
+	at org.gradle.api.internal.file.copy.FileCopyAction$FileCopyDetailsInternalAction.processFile(FileCopyAction.java:49)
+	at org.gradle.api.internal.file.copy.NormalizingCopyActionDecorator.lambda$execute$0(NormalizingCopyActionDecorator.java:70)
+	at org.gradle.api.internal.file.copy.DuplicateHandlingCopyActionDecorator.lambda$execute$0(DuplicateHandlingCopyActionDecorator.java:65)
+	at org.gradle.api.internal.file.copy.CopyFileVisitorImpl.processFile(CopyFileVisitorImpl.java:68)
+	at org.gradle.api.internal.file.copy.CopyFileVisitorImpl.visitFile(CopyFileVisitorImpl.java:52)
+	at org.gradle.api.internal.file.collections.DefaultDirectoryWalker$PathVisitor.visitFile(DefaultDirectoryWalker.java:115)
+	at org.gradle.api.internal.file.collections.DefaultDirectoryWalker$PathVisitor.visitFile(DefaultDirectoryWalker.java:68)
+	at org.gradle.api.internal.file.collections.DefaultDirectoryWalker.walkDir(DefaultDirectoryWalker.java:62)
+	at org.gradle.api.internal.file.collections.DirectoryFileTree.walkDir(DirectoryFileTree.java:148)
+	at org.gradle.api.internal.file.collections.DirectoryFileTree.visitFrom(DirectoryFileTree.java:126)
+	at org.gradle.api.internal.file.collections.DirectoryFileTree.visit(DirectoryFileTree.java:111)
+	at org.gradle.api.internal.file.collections.FileTreeAdapter.visit(FileTreeAdapter.java:110)
+	at org.gradle.api.internal.file.CompositeFileTree.visit(CompositeFileTree.java:108)
+	at org.gradle.api.internal.file.copy.CopySpecActionImpl.execute(CopySpecActionImpl.java:43)
+	at org.gradle.api.internal.file.copy.CopySpecActionImpl.execute(CopySpecActionImpl.java:25)
+	at org.gradle.api.internal.file.copy.DefaultCopySpec$DefaultCopySpecResolver.walk(DefaultCopySpec.java:779)
+	at org.gradle.api.internal.file.copy.DefaultCopySpec$DefaultCopySpecResolver.walk(DefaultCopySpec.java:781)
+	at org.gradle.api.internal.file.copy.DefaultCopySpec.walk(DefaultCopySpec.java:519)
+	at org.gradle.api.internal.file.copy.DelegatingCopySpecInternal.walk(DelegatingCopySpecInternal.java:289)
+	at org.gradle.api.internal.file.copy.CopySpecBackedCopyActionProcessingStream.process(CopySpecBackedCopyActionProcessingStream.java:42)
+	at org.gradle.api.internal.file.copy.DuplicateHandlingCopyActionDecorator.lambda$execute$1(DuplicateHandlingCopyActionDecorator.java:47)
+	at org.gradle.api.internal.file.copy.NormalizingCopyActionDecorator.lambda$execute$1(NormalizingCopyActionDecorator.java:62)
+	at org.gradle.api.internal.file.copy.FileCopyAction.execute(FileCopyAction.java:38)
+	at org.gradle.api.internal.file.copy.NormalizingCopyActionDecorator.execute(NormalizingCopyActionDecorator.java:61)
+	at org.gradle.api.internal.file.copy.DuplicateHandlingCopyActionDecorator.execute(DuplicateHandlingCopyActionDecorator.java:47)
+	at org.gradle.api.internal.file.copy.CopyActionExecuter.execute(CopyActionExecuter.java:47)
+	at org.gradle.api.tasks.AbstractCopyTask.copy(AbstractCopyTask.java:149)
+	at org.gradle.language.jvm.tasks.ProcessResources.copy(ProcessResources.java:35)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.doExecute(IncrementalTaskAction.java:45)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
-	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.execute(IncrementalTaskAction.java:26)
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
 	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:242)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
@@ -261,9 +242,25 @@ Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Com
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+Caused by: org.gradle.api.GradleException: Missing property (file) for Groovy template expansion. Defined keys [minecraft_version, forge_version, mod_id, mod_name, mod_version, mod_authors, mod_description, project].
+	at org.gradle.api.internal.file.copy.FilterChain$3.transform(FilterChain.java:132)
+	at org.gradle.api.internal.file.copy.FilterChain$3.transform(FilterChain.java:115)
+	at org.gradle.api.internal.file.copy.ChainingTransformer.transform(ChainingTransformer.java:37)
+	at org.gradle.api.internal.file.copy.FilterChain.transform(FilterChain.java:59)
+	at org.gradle.api.internal.file.copy.FilterChain.transform(FilterChain.java:68)
+	at org.gradle.api.internal.file.copy.DefaultFileCopyDetails.open(DefaultFileCopyDetails.java:111)
+	at org.gradle.api.internal.file.AbstractFileTreeElement.copyTo(AbstractFileTreeElement.java:64)
+	at org.gradle.api.internal.file.copy.DefaultFileCopyDetails.copyTo(DefaultFileCopyDetails.java:120)
+	at org.gradle.api.internal.file.AbstractFileTreeElement.copyFile(AbstractFileTreeElement.java:102)
+	at org.gradle.api.internal.file.AbstractFileTreeElement.copyTo(AbstractFileTreeElement.java:83)
+	... 146 more
+Caused by: groovy.lang.MissingPropertyException: No such property: file for class: SimpleTemplateScript1
+	at SimpleTemplateScript1.run(SimpleTemplateScript1.groovy:1)
+	at org.gradle.api.internal.file.copy.FilterChain$3.transform(FilterChain.java:129)
+	... 155 more
 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 1m 53s
-1 actionable task: 1 executed
+BUILD FAILED in 1m 59s
+2 actionable tasks: 2 executed
